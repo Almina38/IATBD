@@ -1,0 +1,453 @@
+/* resources/css/main.css */
+
+:root {
+    --color-main: #0E2B4D;
+    --color-red: #E94850;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    font-size: 15px;
+    background-image: url('/images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Trebuchet MS', sans-serif;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 1.3em;
+}
+
+h2 {
+    font-size: 1.2em;
+}
+
+h3 {
+    font-size: 1.1em;
+}
+
+button {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 1rem;
+}
+
+main {
+    height: calc(100% - 105px);
+    width: 90%;
+    margin: 0 auto;
+}
+
+.input--error {
+    border: 1px solid var(--color-red);
+}
+
+
+input,
+select,
+textarea {
+    padding: .5rem;
+    width: calc(104% - 1rem); /* Maakt de inputvelden breder met wat padding aan de zijkanten */
+    border: 1px solid #ddd;
+    border-radius: .1rem;
+    box-sizing: border-box;
+}
+
+
+.topnav {
+    width: 100%;
+    background-color: var(--color-main);
+    text-align: center;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    position: relative; /* Maak de topnav positie relatief */
+}
+
+.topnav__head {
+    padding: 1rem;
+}
+
+.topnav__logo {
+    color: #ffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem
+}
+
+.topnav__navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    background-color: #289B96;
+}
+
+.topnav__navbar__button {
+    text-decoration: none;
+    padding: .5rem;
+    color: var(--color-main);
+    border: none;
+}
+
+.topnav__navbar__button--logout {
+    background-color: #289B96;
+    border: none;
+    padding: .5rem;
+}
+
+.topnav__navbar__button:hover {
+    cursor: pointer;
+    background-color: var(--color-main);
+    color: #fff;
+    border: none;
+   
+}
+
+.admin-login {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: .5rem;
+}
+
+@media screen and (max-width: 600px) {
+    .admin-login {
+        position: static; /* Als het scherm kleiner is, laat de knop normaal meestromen */
+    }
+}
+
+.filter {
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+}
+
+.filter__select {
+    width: fit-content;
+}
+
+.filter__submit {
+    width: fit-content !important;
+}
+
+.status--success {
+    color: #57ab27;
+}
+
+.status--error {
+    color: #d41111;
+}
+
+.profile {
+    display: flex;
+    max-width: 37.5rem;
+    margin: 0 auto;
+    height: fit-content;
+}
+
+.profile__figure {
+    display: grid;
+    gap: .3rem;
+    width: 100%;
+    height: 100%;
+}
+
+.profile__figure__img {
+    width: 100%;
+}
+
+.profile__form {
+    width: 100%;
+}
+
+.profile__form__content {
+    display: block;
+    width: 100%;
+}
+
+.reviews {
+    width: 100%;
+}
+
+.reviews__review {
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: .2rem;
+    padding: .3rem;
+    margin-bottom: .3rem;
+}
+
+.verzoeken {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.head-button {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+}
+
+.head-button__header {
+    margin-bottom: .3rem;
+}
+
+.head-button__button {
+    width: fit-content !important;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: .5rem;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    padding: 1rem;
+    width: 100%;
+    height: fit-content;
+    margin: 1rem 0;
+    box-shadow: 0 0 3px #BB3B3A; 
+}
+
+.card--login {
+    max-width: 325px;
+}
+
+.card__header {
+    text-align: center;
+    margin-bottom: .5rem;
+}
+
+.card__fig {
+    display: flex;
+    justify-content: center;
+    padding-bottom: .5rem;
+}
+
+.card__fig__img {
+    max-height: 10rem;
+    border-radius: .2rem;
+    width: auto;
+    max-width: 100%;
+}
+
+.card__fig__img--detail {
+    max-height: 15rem;
+}
+
+.card__buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.btn-primary {
+    background-color: var(--color-main);
+    color: #fff;
+    padding: .5rem;
+    height: fit-content;
+    border: none;
+    border-radius: .2rem;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary--red {
+    background-color: var(--color-red);
+}
+
+.btn-primary--red:hover {
+    background-color: #BB3B3A !important;
+}
+
+.btn-primary--red:hover:disabled {
+    background-color: #d41111;
+}
+
+.btn-primary--green {
+    background-color: #57ab27;
+}
+
+.btn-primary--green:hover {
+    background-color: #498F21 !important;
+}
+
+.btn-primary:hover {
+    cursor: pointer;
+    background-color: #005081;
+}
+
+.btn-danger {
+    background-color: var(--color-red);
+    color: #fff;
+    padding: .5rem;
+    height: fit-content;
+    border: none;
+    border-radius: .2rem;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+}
+
+.btn-danger:hover {
+    cursor: pointer;
+    background-color: #B50E0E;
+}
+
+.disabled {
+    opacity: .5;
+    pointer-events: none;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.w-auto {
+    width: auto;
+}
+
+.m-auto {
+    margin: 0 auto;
+}
+
+.my-1 {
+    margin: 1rem 0;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.mb-05 {
+    margin-bottom: .5rem;
+}
+
+.mb-03 {
+    margin-bottom: .3rem;
+}
+
+.mt-03 {
+    margin-top: .3rem;
+}
+
+.d-block {
+    display: block;
+}
+
+.d-inline-block {
+    display: inline-block;
+}
+
+.text-error {
+    color: var(--color-red);
+}
+
+.card-header {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem; /* Ruimte onder de header */
+}
+
+.card-body p.welcome-message {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 2rem; /* Ruimte onder het welkomstbericht */
+}
+
+/* Layout voor gebruikers en aanvragen beheren */
+.user-management, .request-management {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.user-management .user-item,
+.request-management .request-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.user-management .user-item:last-child,
+.request-management .request-item:last-child {
+    border-bottom: none;
+}
+
+.user-email, .request-email {
+    margin-right: 1rem;
+}
+
+.user-action-form, .request-action-form {
+    margin: 0;
+}
+
+@media screen and (min-width: 375px) {
+    .filter__select {
+        width: fit-content;
+    }
+}
+
+@media screen and (min-width: 475px) {
+    .profile__figure {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .profile__form {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .profile__form__content {
+        display: block;
+        width: fit-content;
+        margin-right: .3rem;
+    }
+}
+
+@media screen and (min-width: 509px) {
+    .verzoeken {
+        column-gap: .5rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .verzoeken {
+        column-gap: .5rem;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .verzoeken {
+        column-gap: .5rem;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
